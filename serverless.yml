@@ -1,5 +1,4 @@
 service: strapi-4-serverless-guide
-
 frameworkVersion: "3"
 useDotenv: true
 
