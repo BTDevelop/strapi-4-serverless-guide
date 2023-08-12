@@ -1,10 +1,10 @@
-const serverless = require("serverless-http");
-const Strapi = require("@strapi/strapi/lib/index.js");
+const serverless = require('serverless-http');
+const Strapi = require('@strapi/strapi/lib/index.js');
 
 module.exports.hello = async (event, context) => {
   return {
-    body: JSON.stringify({ message: "Hello from Serverless" }),
-    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: 'Hello from Serverless' }),
+    headers: { 'Content-Type': 'application/json' },
   };
 };
 
@@ -23,11 +23,11 @@ const startStrapi = async (strapi) => {
 
 module.exports.strapiHandler = async (event, context) => {
   let workingDir = process.cwd();
-  if (process.env.LAMBDA_TASK_ROOT && process.env.IS_OFFLINE !== "true") {
+  if (process.env.LAMBDA_TASK_ROOT && process.env.IS_OFFLINE !== 'true') {
     workingDir = process.env.LAMBDA_TASK_ROOT;
   }
   if (!global.strapi) {
-    console.info("Cold starting Strapi");
+    console.info('Cold starting Strapi');
     Strapi({ dir: workingDir });
   }
   if (!global.strapi.isLoaded) {
