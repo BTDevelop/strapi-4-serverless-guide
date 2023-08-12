@@ -35,4 +35,5 @@ module.exports.strapiHandler = async (event, context) => {
   }
   const handler = serverless(global.strapi.server.app);
   return handler(event, context);
+  
 };
