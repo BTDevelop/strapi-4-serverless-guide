@@ -1,5 +1,4 @@
-service: strapi-4-serverless-guide
-frameworkVersion: "3"
+service: cms-service
 useDotenv: true
 
 provider:
@@ -9,7 +8,6 @@ provider:
   profile: strapi-serverless-admin # NOTE: Update to your profile name as in ~/.aws/credentials
   logRetentionInDays: 1
   versionFunctions: false
-
   memorySize: 2048
   timeout: 30
 
